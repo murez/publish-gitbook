@@ -28,11 +28,12 @@ git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 # install gitbook
 print_info "installing gitbook-cli"
 npm install gitbook-cli  -g
+npm install -g gitbook-summary
 
 print_info "installing gitbook plugins"
 gitbook --version
 gitbook install
-
+book sm
 # build gitbook
 print_info "buildling gitbook"
 gitbook build
